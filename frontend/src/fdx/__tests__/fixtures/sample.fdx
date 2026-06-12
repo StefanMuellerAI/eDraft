@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<FinalDraft DocumentType="Script" Template="No" Version="5">
+  <Content>
+    <Paragraph Type="Scene Heading" Number="1">
+      <Text>INT. ATELIER – TAG</Text>
+      <FA_Visualization url="https://example.org/viz/szene-01.png"/>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <ScriptNote>
+        <Paragraph>
+          <Text>Lichtstimmung mit Kamera klären</Text>
+        </Paragraph>
+        <Paragraph>
+          <Text>Referenz: Vermeer</Text>
+        </Paragraph>
+      </ScriptNote>
+      <Text>Maria steht am Fenster, </Text>
+      <Text Style="Bold">das Licht</Text>
+      <Text> fällt </Text>
+      <Text Style="Bold+Italic" Color="#E1E11D1D4848">hart</Text>
+      <Text> herein.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>MARIA</Text>
+    </Paragraph>
+    <Paragraph Type="Parenthetical">
+      <Text>(leise)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text Style="Underline" Background="#FFFFFFFF0000">Wir hätten früher gehen sollen.</Text>
+    </Paragraph>
+    <Paragraph Type="Transition">
+      <Text>SCHNITT AUF:</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>NAHAUFNAHME – MARIAS HÄNDE</Text>
+    </Paragraph>
+    <Paragraph Type="General">
+      <Text Font="Courier Final Draft" Size="12">Allgemeiner Text mit Font-Attributen.</Text>
+    </Paragraph>
+    <Paragraph Type="Cast List">
+      <Text>MARIA</Text>
+    </Paragraph>
+    <Paragraph Type="Action" Alignment="Left" FirstIndent="0.00">
+      <Text>Absatz mit Layout-Attributen und unbekanntem Kind.</Text>
+      <Unknown_Extension custom="ja"/>
+    </Paragraph>
+  </Content>
+  <TitlePage>
+    <Content>
+      <Paragraph Type="Centered">
+        <Text>EDRAFT BEISPIEL</Text>
+      </Paragraph>
+    </Content>
+  </TitlePage>
+  <SmartType>
+    <Characters>
+      <Character>MARIA</Character>
+    </Characters>
+  </SmartType>
+</FinalDraft>

@@ -1,0 +1,41 @@
+# eDraft – FDX-Drehbuch-Editor (MVP/Demo)
+#
+# Start:  docker compose up --build
+# Aufruf: http://localhost:${EDRAFT_PORT:-8080}
+#
+# SICHERHEITSHINWEIS (NFA-1): Keine Authentifizierung vorhanden — nur im
+# internen Netz / hinter VPN betreiben, niemals öffentlich exponieren!
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "${EDRAFT_PORT:-8080}:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    environment:
+      # Mock-Verhalten des Convert-Endpunkts: "sample" | "not_implemented"
+      EDRAFT_CONVERT_MODE: ${EDRAFT_CONVERT_MODE:-sample}
+      EDRAFT_MAX_UPLOAD_MB: ${EDRAFT_MAX_UPLOAD_MB:-20}
+      # Vorbereitete Toggles für spätere Ausbaustufen (§9), im MVP ohne Wirkung:
+      EDRAFT_AUTH_ENABLED: ${EDRAFT_AUTH_ENABLED:-false}
+      # EDRAFT_DATABASE_URL: postgresql://edraft:edraft@db:5432/edraft
+    restart: unless-stopped
+
+  # Vorbereitet für die spätere Persistenz-Stufe (§10/§11) — im MVP nicht aktiv.
+  # db:
+  #   image: postgres:17-alpine
+  #   environment:
+  #     POSTGRES_DB: edraft
+  #     POSTGRES_USER: edraft
+  #     POSTGRES_PASSWORD: edraft
+  #   volumes:
+  #     - edraft-db:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+# volumes:
+#   edraft-db:

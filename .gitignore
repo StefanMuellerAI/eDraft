@@ -1,0 +1,16 @@
+# Node / Frontend
+node_modules/
+frontend/dist/
+*.local
+
+# Python / Backend
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Umgebung
+.env
+
+# OS / Editor
+.DS_Store

@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+/*
+ * Drehbuchgerechte Typografie (FA-3): Courier Prime, elementspezifische
+ * Einrückung und Ausrichtung nach Branchenkonvention. Die Maße sind in `ch`
+ * angegeben (Monospace: 1 Zeichen = 1ch) und orientieren sich am klassischen
+ * US-Drehbuchlayout.
+ */
+
+.screenplay-page {
+  padding: 5rem 0;
+}
+
+.screenplay-editor {
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #18181b;
+}
+
+.screenplay-editor .ProseMirror {
+  outline: none;
+  padding: 0 6ch 0 10ch;
+  max-width: 78ch;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+.screenplay-editor p {
+  margin: 0;
+  line-height: 1.25;
+  min-height: 1.25em;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+/* Szenenüberschrift: fett, Versalien, deutlicher Abstand davor */
+.sp-sceneHeading {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 2em !important;
+}
+
+/* Handlung */
+.sp-action {
+  margin-top: 1.25em !important;
+}
+
+/* Figur: eingerückt, Versalien */
+.sp-character {
+  margin-left: 22ch;
+  margin-top: 1.25em !important;
+  text-transform: uppercase;
+}
+
+/* Regieanweisung: schmale, eingerückte Spalte */
+.sp-parenthetical {
+  margin-left: 16ch;
+  max-width: 30ch;
+}
+
+/* Dialog: eingerückte Spalte */
+.sp-dialogue {
+  margin-left: 10ch;
+  max-width: 38ch;
+}
+
+/* Übergang: rechtsbündig, Versalien */
+.sp-transition {
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 1.25em !important;
+}
+
+/* Einstellung: Versalien */
+.sp-shot {
+  text-transform: uppercase;
+  margin-top: 1.25em !important;
+}
+
+.sp-general {
+  margin-top: 1.25em !important;
+}
+
+.screenplay-editor .ProseMirror > p:first-child {
+  margin-top: 0 !important;
+}
+
+/* Indikator: Element hat eine Notiz (FA-14) */
+.screenplay-editor p[data-note]::before {
+  content: '';
+  position: absolute;
+  left: -3.5ch;
+  top: 0.35em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 9999px;
+  background: #f59e0b;
+}
+
+/* Indikator: Szene hat einen Visualisierungs-Link (FA-16) */
+.screenplay-editor p[data-viz-url]::after {
+  content: '';
+  position: absolute;
+  right: -3.5ch;
+  top: 0.35em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 9999px;
+  background: #0ea5e9;
+}
+
+/* Platzhalter in leeren Elementen (TipTap Placeholder-Extension) */
+.screenplay-editor p.is-empty::before {
+  content: attr(data-placeholder);
+  color: #a1a1aa;
+  float: left;
+  height: 0;
+  pointer-events: none;
+  text-transform: none;
+  font-weight: 400;
+}

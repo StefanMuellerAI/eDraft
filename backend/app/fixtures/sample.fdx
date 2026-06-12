@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<FinalDraft DocumentType="Script" Template="No" Version="5">
+  <Content>
+    <Paragraph Type="Scene Heading">
+      <Text>INT. ATELIER DER FILMAKADEMIE – TAG</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Dies ist ein Beispiel-Drehbuch des Konvertierungs-Dienstes. Die echte KI-Konvertierung der Filmakademie ist noch nicht angebunden.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>STUDIERENDE</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Sobald die KI bereit ist, erscheint hier der Inhalt meines Dokuments.</Text>
+    </Paragraph>
+    <Paragraph Type="Transition">
+      <Text>SCHNITT AUF:</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>INT. SCHNITTRAUM – SPÄTER</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Der Demo-Modus ist deutlich gekennzeichnet. Dieses Beispiel lässt sich wie jedes Drehbuch bearbeiten und als FDX exportieren.</Text>
+    </Paragraph>
+  </Content>
+</FinalDraft>
