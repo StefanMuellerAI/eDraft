@@ -99,6 +99,21 @@ Fehler `4xx/5xx {status:"error", message}`. Die spätere echte
 KI-Konvertierung ersetzt nur den Mock-Handler — das Frontend bleibt
 unverändert.
 
+## Deployment auf Vercel (optional)
+
+Das Repo enthält eine `vercel.json`: Das Frontend wird als statischer
+Vite-Build ausgeliefert, das FastAPI-Backend läuft als Python Serverless
+Function (`api/index.py`); `/api/*` und `/healthz` werden per Rewrite darauf
+geleitet. In den Vercel-Projekteinstellungen genügt: Root Directory = Repo-
+Root, Framework Preset = „Other" — Build-Kommando und Output kommen aus der
+`vercel.json`. Umgebungsvariablen (`EDRAFT_CONVERT_MODE` usw.) im Vercel-
+Dashboard setzen.
+
+> **Achtung (NFA-1):** Ein Vercel-Deployment ist öffentlich erreichbar und
+> verletzt damit die Deployment-Auflage dieser Demo. Für Tests unbedingt
+> **Deployment Protection** (z. B. „Vercel Authentication") aktivieren.
+> Hinweis: Uploads an den Konverter sind bei Vercel auf ca. 4,5 MB begrenzt.
+
 ## Entwicklung
 
 Voraussetzungen: Node.js ≥ 22 (siehe `.nvmrc`), Python ≥ 3.11.

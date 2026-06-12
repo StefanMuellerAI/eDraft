@@ -1,0 +1,6 @@
+# Abhängigkeiten für die Vercel-Python-Function (api/index.py).
+# Muss inhaltlich mit backend/requirements.txt übereinstimmen
+# (uvicorn entfällt: Vercel bringt den ASGI-Server selbst mit).
+fastapi>=0.115,<1.0
+python-multipart>=0.0.20
+pydantic-settings>=2.7,<3.0
